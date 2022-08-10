@@ -1,4 +1,10 @@
 <nav class="modulos">
+    <div class="modulo roxo">
+        <h3>14. Formulário</h3>
+        <ul>
+            <li><a href="exercicio.php?dir=formulario&file=formulario">Formulário</a></li>
+        </ul>
+    </div>
     <div class="modulo azul">
         <h3>13. Api</h3>
         <ul>
@@ -18,6 +24,9 @@
         </ul>
         <ul>
             <li><a href="exercicio.php?dir=api&file=download">Download</a></li>
+        </ul>
+        <ul>
+            <li><a href="exercicio.php?dir=api&file=imagens">Desafio Imagens</a></li>
         </ul>
     </div>
     <div class="modulo vermelho">
