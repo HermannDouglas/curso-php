@@ -41,19 +41,32 @@ if(count($_POST) > 0){
 }
 ?>
 
+<?php foreach($erros as $erro): ?>
+    <!-- <div class="alert alert-danger" role="alert"> -->
+        <?= //$erro ?>
+    <!-- </div> -->
+<?php endforeach ?>
+
 <form action="#" method="post">
     <div class="form-row">
         <div class="form-group col-md-9">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control"
+            <input type="text" class="form-control <?= $erros['nome'] ? 'is-invalid' : ''?>" 
                 id="nome" name="nome" placeholder="Nome"
                 value="<?= $_POST['nome'] ?>">
+            <div class="invalid-feedback">
+                <?= $erros['nome'] ?>
+            </div>
         </div>
         <div class="form-group col-md-3">
             <label for="nascimento">Nascimento</label>
             <input type="text" class="form-control"
                 id="nascimento" name="nascimento" placeholder="Nascimento"
                 value="<?= $_POST['nascimento'] ?>">
+            <div class="invalid-feedback">
+                <?= $erros['nascimento'] ?>
+            </div>
+
         </div>
     </div>
     <div class="form-row">
