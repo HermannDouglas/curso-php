@@ -10,6 +10,9 @@
         <ul>
             <li><a href="exercicio.php?dir=db&file=inserir-01">Inserir Registro #01</a></li>
         </ul>
+        <ul>
+            <li><a href="exercicio.php?dir=db&file=consultar">Consultar Registros</a></li>
+        </ul>
     </div>
     <div class="modulo roxo">
         <h3>14. Formulário</h3>
