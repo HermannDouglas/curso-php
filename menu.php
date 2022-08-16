@@ -19,6 +19,9 @@
         <ul>
             <li><a href="exercicio.php?dir=db&file=excluir-02">Excluir Registro #02</a></li>
         </ul>
+        <ul>
+            <li><a href="exercicio.php?dir=db&file=inserir-02">Inserir Registro #02</a></li>
+        </ul>
     </div>
     <div class="modulo roxo">
         <h3>14. Formulário</h3>
