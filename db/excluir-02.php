@@ -10,7 +10,10 @@ $conexao = novaConexao();
 
 if($_GET['excluir']){
     $excluirSQL = "DELETE FROM cadastro WHERE id = ?";
-} // Continuar...
+    $stmt = $conexao->prepare($excluirSQL);
+    $stmt->bind_param("i", $_GET['excluir']);
+    $stmt->execute();
+} 
 
 $sql = "SELECT id, nome, email, nascimento FROM cadastro";
 $resultado = $conexao->query($sql);
