@@ -17,7 +17,7 @@ if($_GET['codigo']){
             if($dados['nascimento']){
                 $dt = new DateTime($dados['nascimento']);
                 $dados['nascimento'] = $dt->format('d/m/Y');
-            } // Continuar...
+            } 
         }
     }
 }
@@ -88,6 +88,19 @@ if(count($_POST) > 0){
         <?= "" //$erro ?>
     <!-- </div> -->
 <?php endforeach ?>
+
+<form action="/exercicio.php" method="get">
+    <input type="hidden" name="dir" value="db">
+    <input type="hidden" name="file" value="alterar">
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <input type="text" name="codigo" 
+                class="form-control" \\ Continuar...
+                value="<?= $_GET['codigo'] ?>"
+                placeholder="Informe o código para consulta">
+        </div>
+    </div>
+</form>
 
 <form action="#" method="post">
     <div class="form-row">
