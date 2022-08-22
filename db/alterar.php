@@ -59,9 +59,9 @@ if(count($_POST) > 0){
 
     if(!count($erros)){
 
-        $sql = "INSERT INTO cadastro
-        (nome, nasciemnto, email, site, filhos, salario)
-        VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "UPDATE cadastro
+        SET nome = ?, nasciemnto = ?, email = ?, site = ?, filhos = ?, salario = ?
+        WHERE ?";
 
         $stmt = $conexao->prepare($sql);
 
@@ -72,9 +72,10 @@ if(count($_POST) > 0){
             $dados['site'],
             $dados['fihlos'],
             $dados['salario'],
+            $dados['id'],
         ];
 
-        $stmt->bind_param("ssssid", ...$params);
+        $stmt->bind_param("ssssidi", ...$params);
 
         if($stmt->execute()){
             unset($dados);
@@ -94,15 +95,20 @@ if(count($_POST) > 0){
     <input type="hidden" name="file" value="alterar">
     <div class="form-group row">
         <div class="col-sm-10">
-            <input type="text" name="codigo" 
-                class="form-control" \\ Continuar...
+            <input type="number" name="codigo" 
+                class="form-control"
                 value="<?= $_GET['codigo'] ?>"
                 placeholder="Informe o código para consulta">
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-success mb-4">Consultar</button>
         </div>
     </div>
 </form>
 
 <form action="#" method="post">
+    <input type="hidden" name="id" value="<?= $dados['id'] ?>"> 
+    <!-- Continuar... -->
     <div class="form-row">
         <div class="form-group col-md-9">
             <label for="nome">Nome</label>
