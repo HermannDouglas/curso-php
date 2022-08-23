@@ -14,7 +14,15 @@ $sql = "INSERT INTO  cadastro
         3000.00
     )";
 
-    $conexao = novaConexao();
-    print_r(get_class_methods($conexao));
+$conexao = novaConexao();
+// print_r(get_class_methods($conexao));
+
+if($conexao->exec($sql)){
+    $id = $conexao->lastInsertId();
+    echo "Novo cadastro com id $id.";
+} else {
+    echo $conexao->errorCode() . "<br>";
+    print_r($conexao->errorInfo());
+}
 
 ?>
