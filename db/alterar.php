@@ -18,6 +18,9 @@ if($_GET['codigo']){
                 $dt = new DateTime($dados['nascimento']);
                 $dados['nascimento'] = $dt->format('d/m/Y');
             } 
+            if($dados['salario']){
+                $dados['salario'] = str_replace(".", ",", $dados['salario']);
+            } 
         }
     }
 }
@@ -71,7 +74,7 @@ if(count($_POST) > 0){
             $dados['email'],
             $dados['site'],
             $dados['fihlos'],
-            $dados['salario'],
+            $dados['salario'] ? str_replace(",", ".", $dados['salario']) : null,
             $dados['id'],
         ];
 
@@ -108,7 +111,6 @@ if(count($_POST) > 0){
 
 <form action="#" method="post">
     <input type="hidden" name="id" value="<?= $dados['id'] ?>"> 
-    <!-- Continuar... -->
     <div class="form-row">
         <div class="form-group col-md-9">
             <label for="nome">Nome</label>

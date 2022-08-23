@@ -25,6 +25,9 @@
         <ul>
             <li><a href="exercicio.php?dir=db&file=alterar">Alterar Registro</a></li>
         </ul>
+        <ul>
+            <li><a href="exercicio.php?dir=db&file=inserir_pdo">PDO: Inserir</a></li>
+        </ul>
     </div>
     <div class="modulo roxo">
         <h3>14. Formulário</h3>
