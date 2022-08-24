@@ -25,4 +25,6 @@ if($conexao->exec($sql)){
     print_r($conexao->errorInfo());
 }
 
+$conexao->close();
+
 ?>
