@@ -6,17 +6,18 @@ require_once "conexao_pdo.php";
 $sql = "UPDATE cadastro 
         SET nome = ?, nascimento = ?, email = ?, site = ?, filhos = ?, salario = ?
         WHERE id = ?";
+
 $conexao = novaConexao();
 $stmt = $conexao->prepare($sql);
 
 $resultado = $stmt->execute(
     [
         'Gui',
-        '1989-12-11',
-        'gui@xmail.com.br',
-        'https://gui.site.com.br',
+        '1980-12-12',
+        'gui@gui.com.br',
+        'http://gui.co',
         1,
-        12000.23,
+        12000,
         5
     ]
 );

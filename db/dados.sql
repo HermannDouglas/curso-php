@@ -21,10 +21,30 @@ VALUES (
 INSERT INTO cadastro
 (nome, nascimento, email, site, filhos, salario)
 VALUES (
-    'Carol Danvers',
-    '1983-09-17',
-    'carol.danvers@email.com.br',
-    'https://caroldanvers.sites.com.br',
-    2,
-    30800.20
+    'Clark Kent',
+    '1983-09-04',
+    'clark.kent@email.com.br',
+    'https://clarkkent.com',
+    1,
+    20000.20
+);
+INSERT INTO cadastro
+(nome, nascimento, email, site, filhos, salario)
+VALUES (
+    'Bruce Wayne',
+    '1987-11-15',
+    'bruce.wayne@email.com.br',
+    'https://brucewayne.com',
+    5,
+    90300
+);
+INSERT INTO cadastro
+(nome, nascimento, email, site, filhos, salario)
+VALUES (
+    'Diana Prince',
+    '1985-08-11',
+    'diana.prince@email.com.br',
+    'https://dianaprince.com',
+    0,
+    80500.43
 );
