@@ -34,6 +34,9 @@
         <ul>
             <li><a href="exercicio.php?dir=db&file=excluir_pdo">PDO: Excluir</a></li>
         </ul>
+        <ul>
+            <li><a href="exercicio.php?dir=db&file=alterar_pdo">PDO: Alterar</a></li>
+        </ul>
     </div>
     <div class="modulo roxo">
         <h3>14. Formulário</h3>
