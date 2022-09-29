@@ -33,7 +33,7 @@ $conexao->close();
     </thead>
     <tbody>
         <?php foreach($registros as $registro): ?>
-            <tr>
+            <tr> 
                 <td><?= $registro['id'] ?></td>
                 <td><?= $registro['nome'] ?></td>
                 <td>
